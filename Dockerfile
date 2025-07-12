@@ -7,7 +7,7 @@ RUN apk add --no-cache yarn
 COPY package*.json ./
 
 RUN npm install
-# RUN npm install web3@1.8.0 axios chalk@2 fs https-proxy-agent dotenv
+RUN npm install web3@1.8.0 axios chalk@2 fs https-proxy-agent dotenv
 
 # Copy package.json and package-lock.json to the working directory
 
