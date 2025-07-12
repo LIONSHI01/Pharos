@@ -6,8 +6,10 @@ services:
     build: .
     volumes:
       - .:/usr/src/app
+      - /usr/src/app/node_modules # Preserve container's node_modules
+    env_file:
+      - .env
     environment:
-      NODE_ENV: development
-        - .env
-    command: /bin/sh -c "node index.js"
+      - NODE_ENV=development
+    command: node index.js
     restart: always
